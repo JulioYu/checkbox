@@ -1,0 +1,67 @@
+.checkbox {
+    display: flex;
+    flex-direction: row;
+	float: left;
+	position: relative;
+    width: "auto";
+    height: 20px;
+}
+.checkbox > span {
+    line-height: 20px;
+    margin-left: 4px;
+    font-size: 12px;
+    transform: scale(0.91);
+    transform-origin: 5% 50%;
+    overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.checkbox [class^="checkbox_icon"] {
+    font-family: 'fontello';
+    font-weight: normal;
+	font-style: normal;
+	float: left;
+	position: relative;
+	width: 16px;
+    height: 16px;
+    top: 2px;
+}
+.checkbox [class^="checkbox_icon"]::before {
+	display: inline-block;
+	width: 23px;
+	text-align: center;
+	vertical-align: baseline;
+	font: normal normal normal 14px/1em fontello;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.checkbox [class^="checkbox_icon"]::after {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #dbdbdb;
+}
+.checkbox .checkbox_icon_ok::before {
+    content: '\e800';
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 16px;
+	color: #50ABC7;
+    font-size: 12px;
+    transform: scale(0.91);
+}
+.checkbox .checkbox_icon_half::before {
+	content: '';
+	position: absolute;
+	top: 7px;
+	left: 4px;
+	width: 8px;
+	height: 2px;
+	background-color: #50ABC7
+}
